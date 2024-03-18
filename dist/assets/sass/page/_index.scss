@@ -1,0 +1,283 @@
+@use "../base/fonts";
+@use "../base/mediaquery";
+@use "../layout/common";
+@use "../mixin/clearfix";
+@use "../mixin/csshack";
+
+.p-hero {
+    position: relative;
+    padding-bottom: 93px;
+    &__img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+    &__txt {
+        max-width: 1045px;
+        margin: 0 auto;
+        width: 82%;
+        padding-top: 121px;
+        .lead {
+            display: flex;
+            align-items: flex-end;
+            .txt {
+                margin: 0 23px 16px 0;
+            }
+        }
+        h2 {
+            margin: 0 0 46px;
+        }
+        .present {
+            &__txt {
+                margin-bottom: 10px;
+            }
+            &__icon {
+                margin-bottom: 88px;
+            }
+        }
+    }
+    &__lead {
+        font-size: 1.7rem;
+        font-weight: bold;
+        line-height: 2.4;
+        text-align: center;
+    }
+}
+
+.p-body {
+    padding: 104px 0 0;
+    background: url("../images/bg_body01.png") no-repeat top/cover;
+    &__inner {
+        max-width: 1045px;
+        margin: 0 auto;
+    }
+}
+
+.p-payment {
+    &__head {
+        max-width: 873px;
+        margin: 0 auto 51px;
+    }
+    &__column {
+        display: flex;
+        .example {
+            width: 65.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 45px 40px;
+            .head {
+                font-size: 2.3rem;
+                font-weight: bold;
+                line-height: 1.56;
+                text-align: center;
+                span {
+                    display: block;
+                }
+            }
+            .plus {
+                padding: 24px 23px 0;
+            }
+            .num {
+                &__head {
+                    font-size: 1.9rem;
+                    font-weight: bold;
+                    letter-spacing: .05em;
+                    line-height: 1;
+                    margin-bottom: 11px;
+                }
+                &__body {
+                    font-size: 6rem;
+                    font-weight: bold;
+                    line-height: 1;
+                    span {
+                        font-size: 2rem;
+                        font-weight: bold;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+        .year {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &__head {
+                font-size: 1.9rem;
+                font-weight: bold;
+                letter-spacing: .05em;
+                color: #fff;
+                width: 209px;
+                border-radius: 16px;
+                text-align: center;
+                margin-bottom: 11px;
+            }
+            &__body {
+                font-size: 6rem;
+                font-weight: bold;
+                line-height: 1;
+                span {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    line-height: 1;
+                }
+            }
+        }
+        &.-purple {
+            background: url("../images/bg_payment01.png") no-repeat center/contain;
+            margin-bottom: 34px;
+            .example {
+                padding: 45px 40px;
+                .head {
+                    margin-right: 48px;
+                    letter-spacing: .15em;
+                    span {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            background: #8095BB;
+                            opacity: .23;
+                            position: absolute;
+                            left: 6%;
+                            bottom: 0;
+                            width: 88%;
+                            height: 11px;
+                        }
+                    }
+                }
+                .num {
+                    &__head {
+                        border: 1px solid #8095BB;
+                        border-radius: 13px;
+                        text-align: center;
+                        color: #8095BB;
+                        padding: 3.5px 0;
+                    }
+                    &__body {
+                        color: #8095BB;
+                        span {
+                            color: #8095BB;
+                        }
+                    }
+                }
+            }
+            .year {
+                background: url("../images/bg_payment02.png") no-repeat center/contain;
+                &__head {
+                    background: #8095BB;
+                }
+                &__body {
+                    color: #8095BB;
+                    span {
+                        color: #8095BB;
+                    }
+                }
+            }
+        }
+        &.-green {
+            background: url("../images/bg_payment03.png") no-repeat center/contain;
+            margin-bottom: 79px;
+            .example {
+                padding: 45px 38px 45px 25px;
+                .head {
+                    margin-right: 31px;
+                    span {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            background: #95BC46;
+                            opacity: .23;
+                            position: absolute;
+                            left: 0%;
+                            bottom: 0;
+                            width: 100%;
+                            height: 11px;
+                        }
+                    }
+                }
+                .num {
+                    &__head {
+                        border: 1px solid #95BC46;
+                        border-radius: 13px;
+                        text-align: center;
+                        color: #95BC46;
+                        padding: 3.5px 0;
+                    }
+                    &__body {
+                        color: #95BC46;
+                        span {
+                            color: #95BC46;
+                        }
+                    }
+                }
+            }
+            .year {
+                background: url("../images/bg_payment04.png") no-repeat center/contain;
+                &__head {
+                    background: #95BC46;
+                }
+                &__body {
+                    color: #95BC46;
+                    span {
+                        color: #95BC46;
+                    }
+                }
+            }
+        }
+    }
+    &__eco {
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+        &__item {
+            display: flex;
+            align-items: flex-end;
+            & + & {
+                margin-left: 32px;
+            }
+            .circle {
+                background: #fff;
+                border-radius: 50%;
+                line-height: 1;
+                padding: 36px 20px;
+                border: 3px solid #F58232;
+                color: #F58232;
+                font-size: 1.9rem;
+                font-weight: bold;
+                letter-spacing: .05em;
+            }
+            .num {
+                color: #F58232;
+                font-size: 9.3rem;
+                font-weight: bold;
+                line-height: 1;
+                margin-left: 4px;
+                .yen {
+                    color: #F58232;
+                    font-size: 3.1rem;
+                    margin-left: 4px;
+                }
+                .txt {
+                    color: #F58232;
+                    font-size: 4.8rem;
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+}
+
+.p-bnr {
+    margin: 0 0 102px;
+    a {
+        display: block;
+        margin: 0 0 6px;
+    }
+    p {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}

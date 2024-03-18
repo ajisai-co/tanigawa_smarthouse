@@ -1,0 +1,11 @@
+@use "../base/fonts";
+@use "../base/mediaquery";
+@use "../layout/common";
+@use "../mixin/clearfix";
+@use "../mixin/csshack";
+
+.l-header {
+    position: absolute;
+    left: 66px;
+    top: 67px;
+}
