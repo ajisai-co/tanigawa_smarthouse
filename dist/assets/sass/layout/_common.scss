@@ -18,10 +18,10 @@ body {
 
 
 @function calcResp($n) {
-	@return calc($n * 100vw / 375);
+	@return calc($n * 100vw / 393);
 }
 @function calcPc($n) {
-	@return min(calc($n * 100vw / 1366), $n);
+	@return min(calc($n * 100vw / 1280), $n);
 }
 
 .dev-sitemap{
