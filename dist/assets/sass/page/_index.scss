@@ -46,7 +46,7 @@
 }
 
 .p-body {
-    padding: 104px 0 0;
+    padding: 104px 0 141px;
     background: url("../images/bg_body01.png") no-repeat top/cover;
     &__inner {
         max-width: 1045px;
@@ -412,6 +412,7 @@
 }
 
 .p-point {
+    margin-bottom: 104px;
     &__head {
         background: #95BC46;
         border-radius: 6px 6px 0 0;
@@ -443,6 +444,9 @@
             img {
                 margin-right: 10px;
             }
+            span {
+                color: #FFF226;
+            }
         }
         &__body {
             background: #fff;
@@ -457,12 +461,24 @@
                     color: #95BC46;
                 }
             }
+            sup {
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
             .txt {
                 font-size: 1.8rem;
                 font-weight: 500;
                 margin-bottom: 20px;
+                line-height: 1.72;
                 sup {
                     margin: 0 6px 0 4px;
+                }
+            }
+            .caption {
+                font-size: 1.3rem;
+                font-weight: 500;
+                .head {
+                    margin-right: 14px;
                 }
             }
             strong {
@@ -534,7 +550,71 @@
                     }
                 }
             }
+            .plan {
+                display: flex;
+                justify-content: space-between;
+                img {
+                    &:nth-child(1) {
+                        width: 56.8%;
+                    }
+                    &:nth-child(2) {
+                        width: 42.3%;
+                    }
+                }
+            }
         }
     }
 }
 
+.p-cta {
+    text-align: center;
+    p {
+        margin-bottom: 11px;
+        span {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: .05em;
+            line-height: 1;
+            color: #F58232;
+            display: inline-block;
+            position: relative;
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 2px;
+                height: 100%;
+                background: #F58232;
+            }
+            &::before {
+                left: -20px;
+                transform: rotate(-30deg);
+            }
+            &::after {
+                right: -20px;
+                transform: rotate(30deg);
+            }
+        }
+    }
+    a {
+        display: inline-block;
+        width: 638px;
+        height: 132px;
+        background: #F58232;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 5.1rem;
+        font-weight: bold;
+        letter-spacing: .1em;
+        margin: 0 auto;
+        position: relative;
+        img {
+            position: absolute;
+            right: 28px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

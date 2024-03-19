@@ -3,3 +3,16 @@
 @use "../layout/common";
 @use "../mixin/clearfix";
 @use "../mixin/csshack";
+
+.l-footer {
+    background: #95BC46;
+    text-align: center;
+    padding: 17px 0 15px;
+    &__copyright {
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: .05em;
+        line-height: 1;
+    }
+}
