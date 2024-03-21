@@ -9,3 +9,11 @@
     left: 66px;
     top: 67px;
 }
+
+@include mediaquery.sp {
+    .l-header {
+        left: common.calcResp(29);
+        top: common.calcResp(29);
+        width: common.calcResp(145);
+    }
+}

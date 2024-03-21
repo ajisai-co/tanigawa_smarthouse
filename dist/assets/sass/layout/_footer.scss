@@ -16,3 +16,13 @@
         line-height: 1;
     }
 }
+
+@include mediaquery.sp {
+    .l-footer {
+        padding: common.calcResp(17) 0 common.calcResp(15);
+        margin-bottom: common.calcResp(60);
+        &__copyright {
+            font-size: common.calcResp(12);
+        }
+    }
+}
