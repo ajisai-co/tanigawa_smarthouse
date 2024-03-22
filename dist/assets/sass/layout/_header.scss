@@ -6,8 +6,8 @@
 
 .l-header {
     position: absolute;
-    left: 66px;
-    top: 67px;
+    left: common.calcPc(66);
+    top: common.calcPc(67);
 }
 
 @include mediaquery.sp {

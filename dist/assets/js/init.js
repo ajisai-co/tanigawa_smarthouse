@@ -122,6 +122,8 @@ $(function(){
 	 * https://swiperjs.com/
 	 */
 	// slideAll();
+
+	acd();
 	
 });
 
@@ -248,4 +250,11 @@ var testModule = function(){
 	// ).done(function() {
 		
 	// });
+}
+
+var acd = function() {
+	// アコーディオン機能を実装
+	$('.js-acd').on('click', function() {
+		$(this).next().slideToggle();
+	});
 }
