@@ -16,7 +16,6 @@
     &__txt {
         width: common.calcPc(1045);
         margin: 0 auto;
-        // width: 82%;
         padding-top: common.calcPc(121);
         .lead {
             display: flex;
@@ -66,9 +65,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: common.calcPc(45) common.calcPc(10);
             .head {
-                font-size: common.calcPc(23);
+                font-size: common.calcPc(20);
                 font-weight: bold;
                 line-height: 1.56;
                 text-align: center;
@@ -82,14 +80,14 @@
             .num {
                 text-align: center;
                 &__head {
-                    font-size: common.calcPc(16);
+                    font-size: common.calcPc(14);
                     font-weight: bold;
                     letter-spacing: .05em;
                     line-height: 1;
                     margin-bottom: common.calcPc(11);
                 }
                 &__body {
-                    font-size: common.calcPc(52);
+                    font-size: common.calcPc(50);
                     font-weight: bold;
                     line-height: 1;
                     span {
@@ -117,7 +115,7 @@
                 margin-bottom: common.calcPc(11);
             }
             &__body {
-                font-size: common.calcPc(56);
+                font-size: common.calcPc(50);
                 font-weight: bold;
                 line-height: 1;
                 span {
@@ -131,7 +129,7 @@
             background: url("../images/bg_payment01.png") no-repeat center/contain;
             margin-bottom: common.calcPc(34);
             .example {
-                padding: common.calcPc(50) common.calcPc(0) common.calcPc(50) common.calcPc(40);
+                padding: common.calcPc(54) common.calcPc(0) common.calcPc(50) common.calcPc(40);
                 .head {
                     margin-right: common.calcPc(40);
                     letter-spacing: .15em;
@@ -187,8 +185,8 @@
                 &::after {
                     content: "";
                     position: absolute;
-                    left: calc(50% - 5px);
-                    top: calc(100% - 30px);
+                    left: calc(50% - common.calcPc(5));
+                    top: calc(100% - common.calcPc(30));
                     width: common.calcPc(10);
                     height: common.calcPc(65);
                     background: url("../images/icon_arrow01.png") no-repeat center/contain;
@@ -209,7 +207,7 @@
             background: url("../images/bg_payment03.png") no-repeat center/contain;
             margin-bottom: common.calcPc(79);
             .example {
-                padding: common.calcPc(50) common.calcPc(18) common.calcPc(50) common.calcPc(28);
+                padding: common.calcPc(54) common.calcPc(14) common.calcPc(50) common.calcPc(28);
                 .head {
                     margin-right: common.calcPc(20);
                     span {
@@ -228,7 +226,6 @@
                 }
                 .plus {
                     position: relative;
-                    padding-left: 0;
                     &::after {
                         content: "";
                         position: absolute;
@@ -279,16 +276,49 @@
                     }
                 }
                 .caption {
-                    text-align: center;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    bottom: 0;
                     width: 100%;
+                    text-align: center;
+                    p {
+                        position: relative;
+                        display: inline-block;
+                        font-weight: bold;
+                        font-size: common.calcPc(15);
+                        margin-bottom: common.calcPc(10);
+                        &::before, &::after {
+                            content: "";
+                            width: 1px;
+                            height: 100%;
+                            background: #000;
+                            position: absolute;
+                            top: 0;
+                        }
+                        &::before {
+                            left: -20px;
+                            transform: rotate(-20deg);
+                        }
+                        &::after {
+                            right: -20px;
+                            transform: rotate(20deg);
+                        }
+                    }
                     span {
                         font-size: common.calcPc(14);
-                        font-weight: bold;
-                        display: block;
+                        display: inline-block;
+                        position: relative;
+                        z-index: 10;
+                    }
+                    .yellow {
+                        z-index: 0;
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            height: 9px;
+                            background: #FFF226;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            z-index: -1;
+                        }
                     }
                 }
             }
@@ -310,17 +340,21 @@
                 background: #fff;
                 border-radius: 50%;
                 line-height: 1;
-                padding: common.calcPc(32) common.calcPc(16);
+                width: common.calcPc(100);
+                height: common.calcPc(100);
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 border: 3px solid #F58232;
                 color: #F58232;
                 text-align: center;
-                font-size: common.calcPc(19);
+                font-size: common.calcPc(16);
                 font-weight: bold;
                 letter-spacing: .05em;
             }
             .num {
                 color: #F58232;
-                font-size: common.calcPc(88);
+                font-size: common.calcPc(92);
                 font-weight: bold;
                 line-height: 1;
                 margin-left: common.calcPc(4);
@@ -841,11 +875,11 @@
                 }
                 .num {
                     &__head {
-                        font-size: common.calcResp(11);
+                        font-size: common.calcResp(10);
                         margin-bottom: common.calcResp(11);
                     }
                     &__body {
-                        font-size: common.calcResp(38);
+                        font-size: common.calcResp(32);
                         span {
                             font-size: common.calcResp(12);
                         }
@@ -854,7 +888,7 @@
             }
             .year {
                 width: 100%;
-                padding: common.calcResp(29) 0;
+                padding: common.calcResp(30) 0;
                 &__head {
                     font-size: common.calcResp(12);
                     width: common.calcResp(134);
@@ -904,7 +938,7 @@
                     .num {
                         &__head {
                             border-radius: common.calcResp(13);
-                            padding: common.calcResp(3) 0;
+                            padding: common.calcResp(3) common.calcResp(6);
                         }
                     }
                 }
@@ -952,7 +986,7 @@
                     .num {
                         &__head {
                             border-radius: common.calcResp(13);
-                            padding: common.calcResp(3) 0;
+                            padding: common.calcResp(3) common.calcResp(6);
                         }
                     }
                 }
@@ -960,12 +994,41 @@
                     background: url("../images/bg_payment04_sp.png") no-repeat center/contain;
                     position: relative;
                     z-index: 10;
+                    padding: common.calcResp(9);
                     &::after {
                         content: none;
                     }
                     .caption {
+                        p {
+                            font-size: common.calcResp(11);
+                            margin-bottom: common.calcResp(10);
+                            &::before {
+                                left: -20px;
+                                transform: rotate(-20deg);
+                            }
+                            &::after {
+                                right: -20px;
+                                transform: rotate(20deg);
+                            }
+                        }
                         span {
                             font-size: common.calcResp(10);
+                            display: inline-block;
+                            position: relative;
+                            z-index: 10;
+                        }
+                        .yellow {
+                            z-index: 0;
+                            &::before {
+                                content: "";
+                                width: 100%;
+                                height: 9px;
+                                background: #FFF226;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                z-index: -1;
+                            }
                         }
                     }
                 }
@@ -980,19 +1043,19 @@
                     margin: common.calcResp(12) 0 0;
                 }
                 .circle {
-                    width: common.calcResp(75);
-                    height: common.calcResp(75);
-                    margin-right: common.calcResp(9);
-                    padding: common.calcResp(20) common.calcResp(10) common.calcResp(10);
-                    font-size: common.calcResp(11);
+                    width: common.calcResp(70);
+                    height: common.calcResp(70);
+                    margin-right: common.calcResp(6);
+                    font-size: common.calcResp(10);
                     line-height: 1.2;
                 }
                 .num {
-                    font-size: common.calcResp(71);
+                    font-size: common.calcResp(64);
                     margin-left: common.calcResp(4);
+                    letter-spacing: -.03em;
                     .yen {
                         color: #F58232;
-                        font-size: common.calcResp(23);
+                        font-size: common.calcResp(20);
                         margin-left: common.calcResp(4);
                         letter-spacing: -.5em;
                     }
@@ -1013,6 +1076,7 @@
             }
         }
         &__caption {
+            text-align: left;
             margin-bottom: common.calcResp(100);
             font-size: common.calcResp(12);
         }
